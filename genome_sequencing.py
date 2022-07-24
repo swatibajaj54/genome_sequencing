@@ -273,14 +273,11 @@ def max_non_branching_path(adjacency_dict):
         used_key = ''
         if key in in_vertices and adjacency_dict[key] == in_vertices[key]:
             if key == used_key:
-
-            cycle.extend(adjacency_dict[key])
-            cycle.extend([key])
-            cycle.extend(adjacency_dict[key])
-            used_key = key
-            paths.append(cycle)
-            # if key == adjacency_dict[used_key]:
-            # continue
+                cycle.extend(adjacency_dict[key])
+                cycle.extend([key])
+                cycle.extend(adjacency_dict[key])
+                used_key = key
+                paths.append(cycle)
+                # if key == adjacency_dict[used_key]:
+                # continue
     print(paths)
-
-
